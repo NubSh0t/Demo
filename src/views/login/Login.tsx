@@ -6,10 +6,10 @@ import LoginField from "./LoginField";
 
 const Login = () => {
   return (
-    <Box pb={"110px"}>
-      <Title title="Login"></Title>
-      <Box>
-        <Grid container spacing={0} justifyContent="center">
+    <Box sx={{ minHeight: "calc(100vh - 180px)", px: { xs: 2, sm: 3 }, py: { xs: 4, md: 8 } }}>
+      <Box sx={{ maxWidth: 1120, mx: "auto" }}>
+        <Title title="Login"></Title>
+        <Grid container justifyContent="center">
           <Grid
             item
             xs={12}
@@ -21,10 +21,7 @@ const Login = () => {
             justifyContent="center"
             alignItems="center"
           >
-            <Card
-              elevation={9}
-              sx={{ p: 4, zIndex: 1, width: "100%", maxWidth: "500px" }}
-            >
+            <Card elevation={3} sx={{ p: { xs: 3, sm: 5 }, zIndex: 1, width: "100%", maxWidth: "500px", borderRadius: 2 }}>
               <LoginField />
             </Card>
           </Grid>

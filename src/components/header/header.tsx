@@ -26,7 +26,7 @@ const Header: FC = () => {
 
   const matchMobileView = useMediaQuery(breakpoints.down("lg"));
   return (
-    <Box sx={{ backgroundColor: "#173039" }}>
+    <Box sx={{ backgroundColor: "#173039", width: "100%", overflowX: "hidden" }}>
       <Container
         sx={{
           [breakpoints.up("sm")]: {
@@ -63,6 +63,10 @@ const Header: FC = () => {
                 zIndex: "appBar",
                 position: "fixed",
                 height: { xs: "100vh", lg: "auto" },
+                width: { xs: "100vw", lg: "100%" },
+                maxWidth: "100vw",
+                boxSizing: "border-box",
+                overflowX: "hidden",
                 top: visibleMenu ? 0 : "-120vh",
                 left: 0
               }

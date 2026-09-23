@@ -51,17 +51,17 @@ const Dashboard = () => {
       <Box sx={{ background: "linear-gradient(to bottom, #173039, #00b4c9)" }}>
         <Box
           sx={{
-            padding: "50px 80px",
-            [theme.breakpoints.up("sm")]: { maxWidth: "1400px" },
-            width: "calc(100vw - 6px)",
+            padding: { xs: "32px 16px", sm: "48px 32px", lg: "56px 48px" },
+            [theme.breakpoints.up("sm")]: { maxWidth: "1280px" },
+            width: "100%",
             margin: "auto",
             textAlign: "left",
           }}
         >
           <Typography
             sx={{
-              fontSize: "45px",
-              lineHeight: "60px",
+              fontSize: { xs: "32px", sm: "40px" },
+              lineHeight: 1.2,
               color: "#fff",
               fontWeight: 700,
               marginBottom: "20px",
@@ -75,7 +75,7 @@ const Dashboard = () => {
             handleKeyDown={handleSearchSubmit}
           />
           <Box
-            sx={{ display: "flex", alignItems: "center", paddingLeft: "20px" }}
+            sx={{ display: "flex", alignItems: "flex-start", paddingLeft: { xs: 0, sm: "12px" }, mt: 1 }}
           >
             <Checkbox
               {...label}
@@ -85,8 +85,8 @@ const Dashboard = () => {
             />
             <Typography
               sx={{
-                fontSize: "18px",
-                lineHeight: "60px",
+                fontSize: { xs: "14px", sm: "16px" },
+                lineHeight: 1.4,
                 color: "#fff",
                 fontWeight: 400,
               }}
@@ -98,23 +98,27 @@ const Dashboard = () => {
       </Box>
       <Box
         sx={{
-          minHeight: "calc(100vh - 450px)",
+          minHeight: "calc(100vh - 420px)",
           backgroundColor: "#fff",
-          padding: "80px 24px",
+          padding: { xs: "32px 16px", sm: "48px 24px", lg: "64px 48px" },
           display: "flex",
+          flexDirection: { xs: "column", lg: "row" },
           gap: "20px",
+          maxWidth: "1400px",
+          margin: "auto",
         }}
       >
-        <Box sx={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+        <Box sx={{ display: "flex", flexDirection: { xs: "row", lg: "column" }, gap: "12px", flexShrink: 0 }}>
           <Button
             variant="contained"
             sx={{
               backgroundColor: "#00dbe3",
               borderRadius: "6px",
-              width: "352px",
-              height: "64px",
-              fontSize: "24px",
-              lineHeight: "60px",
+              width: { xs: "100%", lg: "220px" },
+              minWidth: { xs: 0, lg: "220px" },
+              height: { xs: "50px", lg: "58px" },
+              fontSize: { xs: "14px", sm: "18px" },
+              lineHeight: 1,
               textTransform: "uppercase",
               color: "#ffffff",
               fontWeight: 700,
@@ -127,10 +131,11 @@ const Dashboard = () => {
             sx={{
               backgroundColor: "#23a2bb",
               borderRadius: "6px",
-              width: "352px",
-              height: "64px",
-              fontSize: "24px",
-              lineHeight: "60px",
+              width: { xs: "100%", lg: "220px" },
+              minWidth: { xs: 0, lg: "220px" },
+              height: { xs: "50px", lg: "58px" },
+              fontSize: { xs: "14px", sm: "18px" },
+              lineHeight: 1,
               textTransform: "uppercase",
               color: "#ffffff",
               fontWeight: 700,
@@ -143,10 +148,11 @@ const Dashboard = () => {
             sx={{
               backgroundColor: "#173039",
               borderRadius: "6px",
-              width: "352px",
-              height: "64px",
-              fontSize: "24px",
-              lineHeight: "60px",
+              width: { xs: "100%", lg: "220px" },
+              minWidth: { xs: 0, lg: "220px" },
+              height: { xs: "50px", lg: "58px" },
+              fontSize: { xs: "14px", sm: "18px" },
+              lineHeight: 1,
               textTransform: "uppercase",
               color: "#ffffff",
               fontWeight: 700,
@@ -155,7 +161,7 @@ const Dashboard = () => {
             Exchange
           </Button>
         </Box>
-        <Box sx={{ overflow: "auto", width: { sm: "100%" } }}>
+        <Box sx={{ overflowX: "auto", width: "100%", minWidth: 0 }}>
           <Table
             aria-label="simple table"
             sx={{

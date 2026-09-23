@@ -18,6 +18,9 @@ const Navigation: FC = () => {
       sx={{
         display: "flex",
         flexFlow: "wrap",
+        width: "100%",
+        maxWidth: "100%",
+        alignItems: "center",
         justifyContent: "end",
         flexDirection: { xs: "column", lg: "row" }
       }}
@@ -40,6 +43,7 @@ const Navigation: FC = () => {
             alignItems: "center",
             justifyContent: "center",
             px: { xs: 0, lg: 3 },
+            width: { xs: "100%", lg: "auto" },
             mb: { xs: 3, lg: 0 },
             fontSize: "20px",
             ...destination === "/" && { color: "primary.main" },
@@ -79,7 +83,8 @@ const Navigation: FC = () => {
           mb: { xs: 3, lg: 0 },
           fontSize: "24px",
           lineHeight: "6px",
-          width: "324px",
+          width: { xs: "min(324px, calc(100vw - 32px))", lg: "324px" },
+          maxWidth: "100%",
           height: "45px",
           borderRadius: "6px",
           backgroundColor: "#00dbe3"
