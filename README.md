@@ -84,7 +84,7 @@ The React development server is available at:
 http://localhost:3000
 ```
 
-or ( =if the 3000 port is not available)
+or (if the 3000 port is not available)
 
 ```text
 http://localhost:3001
