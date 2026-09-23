@@ -48,7 +48,7 @@ A demo repository containing two independent assessments:
 Clone the repository and move into the project directory:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/NubSh0t/Demo.git
 cd Demo
 ```
 
